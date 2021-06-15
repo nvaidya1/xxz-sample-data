@@ -35,6 +35,8 @@ public class ResourceLeak {
     public String testS3(final String bucket, final String key) throws IOException {
         S3Object s3Object = amazonS3.getObject(new GetObjectRequest(bucket, key));
         S3ObjectInputStream objectData = s3Object.getObjectContent();
+        
+        S3Object s3Object2 = amazonS3.getObject(new GetObjectRequest(bucket, key));
         String rawJson = IOUtils.toString(objectData);
         return rawJson;
     }
