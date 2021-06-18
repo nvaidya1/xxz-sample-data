@@ -60,7 +60,6 @@ jobs:
       uses: ./.github/vijejain/cicd-actions-bugbash
       if: ${{ success() }}
       with:          
-        name: xxz-data
         build_path: target # build artifact(s) directory
         s3_bucket: codeguru-reviewer-xxz-data
         
