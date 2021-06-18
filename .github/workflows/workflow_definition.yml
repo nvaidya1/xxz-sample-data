@@ -61,7 +61,6 @@ jobs:
       if: ${{ success() }}
       with:          
         name: xxz-data
-        kms_key_id: 14af9ef7-d683-4cbb-9d0f-1b37cba6734f
         build_path: target # build artifact(s) directory
         s3_bucket: codeguru-reviewer-xxz-data
         
